@@ -1,7 +1,7 @@
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
         res = ""
-        u,d = 0,0
+        u, d = 0, 0
         while u < len(word1) and d < len(word2):
             res += word1[u]
             res += word2[d]

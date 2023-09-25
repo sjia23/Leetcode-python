@@ -16,6 +16,7 @@ class Solution:
                 ans.append('false')
         return ans
 
+
 if __name__ == "__main__":
     s = Solution()
     extraCandies = 3
