@@ -31,3 +31,17 @@ class Solution:
             root.right = self.deleteNode(root.right, root.val)
 
         return root
+
+
+if __name__ == '__main__':
+    s = Solution()
+    tree1 = TreeNode(5)
+    tree1.left = TreeNode(3)
+    tree1.right = TreeNode(6)
+    tree1.left.left = TreeNode(2)
+    tree1.left.right = TreeNode(4)
+    tree1.right.left = TreeNode(None)
+    tree1.right.right = TreeNode(7)
+    key = 3
+    ans = s.deleteNode(tree1, key)
+    print(ans)
