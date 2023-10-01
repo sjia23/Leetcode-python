@@ -21,3 +21,30 @@ class Solution:
             return max(lhei, rhei) + 1 if abs(lhei - rhei) <= 1 else -1
 
         return bst(root) != -1
+
+
+def test_balanced_tree(sol: Solution):
+    tree1 = TreeNode(3)
+    tree1.left = TreeNode(9)
+    tree1.right = TreeNode(20)
+    tree1.right.left = TreeNode(15)
+    tree1.right.right = TreeNode(7)
+    assert sol.isBalanced(tree1)
+
+
+def test_unbalanced_tree(sol: Solution):
+    tree2 = TreeNode(1)
+    tree2.left = TreeNode(2)
+    tree2.right = TreeNode(2)
+    tree2.left.left = TreeNode(3)
+    tree2.left.right = TreeNode(3)
+    tree2.left.left.left = TreeNode(4)
+    tree2.left.left.right = TreeNode(4)
+
+    assert not sol.isBalanced(tree2)
+
+
+if __name__ == '__main__':
+    s = Solution()
+    test_balanced_tree(s)
+    test_unbalanced_tree(s)
