@@ -20,7 +20,7 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
-    nums = [3, 1, 3, 4, 3]
+    nums = [3, 1, 3, 4, 37]
     k = 6
     ans = s.maxOperations(nums, k)
     print(ans)
