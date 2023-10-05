@@ -7,7 +7,7 @@ class TreeNode:
 
 
 class Solution:
-    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+    def lowestCommonAncestor(self, root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
         minm = min(p.val, q.val)
         maxm = max(p.val, q.val)
 
@@ -20,3 +20,11 @@ class Solution:
                 root = root.left
             else:
                 root = root.right
+
+
+if __name__ == '__main__':
+    s = Solution()
+    tree1 = TreeNode(2)
+    tree1.left = TreeNode(1)
+
+    assert s.lowestCommonAncestor(tree1, tree1, tree1.left).val == 2
